@@ -1,0 +1,183 @@
+:root {
+    --app-bg: #f0f0f0;
+    
+    --panel-bg: white;
+    --text-color-primary: #333;
+    --text-color-secondary: #555;
+    --border-color: #ddd;
+    --highlight-color: #e63946;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: var(--app-bg);
+    color:var(--text-color-primary);
+    transition: background-color 0.5s ease;
+    /* SMOOTH COLOR TRANSITION */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* --- Buttons --- */
+#generate-btn,
+.lock-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#generate-btn {
+    background-color: var(--highlight-color);
+    color: white;
+}
+
+#generate-btn:hover {
+    background-color: #c9323f;
+}
+
+.lock-btn {
+    background-color: #eee;
+    color: #333;
+}
+
+.lock-btn.locked {
+    background-color: #2a9d8f;
+    /* Green for locked */
+    color: white;
+}
+
+
+/* --- Preview Area --- */
+#preview-area {
+    width: 90%;
+    max-width: 800px;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--panel-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#heading-text {
+    font-family: 'Oswald', sans-serif;
+    /* Initial default */
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: var(--primary-text-color);
+    transition: color 0.5s ease, font-family 0.1s;
+}
+
+#body-text {
+    font-family: 'Lato', sans-serif;
+    /* Initial default */
+    font-size: 1.1em;
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+    transition: color 0.5s ease, font-family 0.1s;
+}
+
+#font-display {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--highlight-color);
+}
+
+/* --- Color Palette Display --- */
+#color-palette-display {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.color-block {
+    flex-grow: 1;
+    height: 100px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: white;
+    /* Default text color on blocks */
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.color-block span {
+    font-weight: bold;
+}
+
+/* --- Copy Button Styling --- */
+.copy-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.8em;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Info Panel --- */
+#info-panel {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color:var(--panel-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+#theme-toggle {
+    margin-left: 10px;
+}
+/* --- Responsive adjustments --- */
+@media (max-width: 600px) {
+    #color-palette-display {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .color-block {
+        height: 50px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

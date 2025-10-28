@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Palate Pro</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Lato:wght@400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Design Palate Pro</h1>
+
+
+        <button id="lock-font-btn" class="lock-btn">
+            🔓 Lock Font Pair
+        </button>
+        <button id="generate-btn">
+            ✨ Generate New Palate
+        </button>
+    </header>
+
+    <main id="preview-area">
+        <h2 id="heading-text">The Quick Design Fox</h2>
+        <p id="body-text">
+            The quick brown fox jumps over the lazy dog. When you click 'Generate',
+            the style, color, and mood of this sentence will change instantly.
+            <span id="font-display">Oswald / Lato</span>
+        </p>
+    </main>
+
+    <section id="color-palette-display"></section>
+
+    <aside id="info-panel">
+        <h2>Palette Information</h2>
+        <div id="hex-codes-info"></div>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
